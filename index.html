@@ -1,28 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="initial-scale=1">
-    <title>Mi portofolio</title>
-    <script src="//code.jquery.com/jquery.min.js"></script>
-    <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
+<html>
+  <head>
+    <link rel="stylesheet" href="styles.css" />
+    <meta charset="utf-8" />
+    <!-- texts -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Sanchez"
+    />
+    <!-- subtitles -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Raleway"
+    />
+    <!-- titles -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Mukta+Vaani"
+    />
     <script src="app.js"></script>
-    <div id="nav-placeholder"></div>
-    <div class="wrapper">
-        <div class="header">
-            <h1 class="title">Hola! Soy Ale, </h1>
-            <h2 class="subtitle"> Ingeniero informático con mención en Tecnologías de la Información.
-            </h2>
+    <title>Mi portfolio</title>
+  </head>
+  <body>
+    <nav id="navbar">
+      <a id="aboutmelink" onclick="change('aboutme')">Quien soy</a>
+      <a id="cvitaelink" onclick="change('cvitae')">Mis conocimientos</a>
+      <a id="projectslink" onclick="change('projects')">Mis proyectos</a>
+      <a id="contactlink" onclick="change('contact')">Contacto</a>
+    </nav>
+    <section id="aboutme">
+      <div id="myinfo">
+        <p id="name">Alejandro García Amador</p>
+        <span
+          >Muy buenas, soy Ingeniero informático con mención en tecnologías de
+          la información, con experiencia en proyectos grupales desarrollo de
+          aplicaciones para Android e IOS, desarrollo de APIs e intranets en
+          Laravel, adquiridos durante nueves meses en prácticas de empresa.
+          Responsable, trabajador, con ganas de seguir formándome y dispuesto a
+          incorporarme, de manera inmediata, a un puesto de trabajo dentro del
+          sector.</span
+        >
+      </div>
+      <img src="img/me.jpg" alt="handosme young man" id="myphoto" />
+    </section>
+    <section id="cvitae">
+      <div class="row">
+        <img src="icons/school_black_24dp.svg" alt="" class="icon">
+        <div class="box">
+          <p class="title">Formación</p>
+          <ul>
+            <li>Gradro en Ingeniería Informática <br><span class="subtitle">Mención en Teconologías de la Información</span></span></li>
+            <li>Bachillerato Tecnológico <br><span class="subtitle">Colegio Nuestra Señora del Pilar Jerez de la Frontera</span></li>
+          </ul>
         </div>
-        <div class="image-container">
-            <img src="img/ale.jpg" alt="Imagen de mi persona" class="main-img">
-        </div>
-    </div>
-</body>
-
+      </div>
+    </section>
+    <section id="projects"></section>
+    <section id="contact"></section>
+  </body>
 </html>
