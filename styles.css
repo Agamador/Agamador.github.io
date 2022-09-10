@@ -11,45 +11,52 @@ body {
     width: 97vw;
     padding: 0;
     margin: 0 auto;
-    background-color: #004643;
-    color: #abd1c6;
+    background-color: #16161a;
+    color: #94a1b2;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 9vh auto;
     align-items: start;
 }
 #navbar {
-    width: 100%;
-    min-height: 5vh;
-    max-height: 9vh;
+    height: 100%;
     position: static;
-    background-color: #abd1c6;
-    color: #2b2c34;
+    background-color: #72757e;
+    color: #fffffe;
     font-size: 1.5rem;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+    flex-wrap: nowrap;
     align-items: center;
-    text-align: left;
     font-family: "Mukta Vaani", "Sanchez";
     border-radius: 0px 0px 10px 10px;
-}
-
-#navbar {
-    color: #001e1d;
+    text-align: center;
     text-decoration: none;
 }
+#navbar div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
-#navbar a:hover {
+#navbar div:hover {
     transition: all 0.5s ease;
-    color: #fba72a;
+    color: #000000;
 }
 #aboutmelink {
-    color: #fba72a;
+    border-radius: 0 0 0 10px;
+}
+#contactlink {
+    border-radius: 0 0 10px 0;
+}
+.activelink {
+    background-color: #7f5af0;
+    color: #000000;
 }
 section {
-    margin-top: 3vh;
+    margin-top: 7vh;
     min-width: 80vw;
     transition-property: opacity;
     transition-duration: 0.25s;
@@ -67,14 +74,12 @@ section {
     text-align: left;
     justify-content: space-evenly;
     opacity: 1;
-    color: #abd1c6;
+    color: #94a1b2;
 }
-
 #myinfo {
     padding: 0 20px;
     max-width: 30vw;
 }
-
 #name {
     font-family: "Mukta Vaani", "Sanchez";
     color: #fffffe;
@@ -87,7 +92,6 @@ section {
     max-height: 500px;
     border-radius: 16px;
 }
-
 #cvitae {
     display: flex;
     flex-direction: column;
@@ -102,13 +106,12 @@ section {
     margin: 2vh 0;
 }
 .icon {
-    height: 6rem;
-    width: 4rem;
-    margin: 0px 8vw;
-    filter: invert(80%) sepia(12%) saturate(455%) hue-rotate(112deg) brightness(102%) contrast(85%);
+    height: 5rem;
+    margin: 2vh 8vw;
+    filter: invert(32%) sepia(81%) saturate(1869%) hue-rotate(238deg) brightness(98%) contrast(91%);
 }
 
-.title{
+.title {
     color: #fffffe;
     font-family: "Mukta Vaani", "Sanchez";
     font-weight: 500;
@@ -116,31 +119,67 @@ section {
     font-size: 1.6rem;
     margin-bottom: 7vh;
 }
-.title p{
+.title p {
     margin: -2rem 0;
 }
 .subtitle {
     font-size: 0.65rem;
-    color: #abd1c6;
+    color: #94a1b2;
+    margin-left: 2vw;
 }
 
 .box {
     border-radius: 10px;
     padding: 20px;
-    background: #004643;
-    
+    background: #242629;
 }
-.shadow-right{
-    box-shadow: 13px 13px 34px #002c2a, -13px -13px 34px #00605c;
+.shadow-right {
+    box-shadow: 5px 5px 19px #1f2023, -5px -5px 19px #292c2f;
 }
-.shadow-left{
-    box-shadow: -13px 13px 34px #002c2a, 13px -13px 34px #00605c;
+.shadow-left {
+    box-shadow: -5px 5px 19px #1f2023, 5px -5px 19px #292c2f;
 }
-
-ul{
+ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
-    text-align: center;
+    text-align: left;
     color: #fffffe;
+}
+
+.date {
+    text-decoration: wavy;
+    font-size: 0.5rem;
+    color: #94a1b2;
+}
+ul.subtitle {
+    padding: 0;
+    list-style-type: disc;
+}
+.certifies {
+    list-style-type: circle;
+    margin-left: 1vw;
+}
+
+.certlogo {
+    vertical-align: middle;
+    height: 1.5rem;
+}
+
+@media (max-width: 800px) {
+    html {
+        font-size: 3vw;
+    }
+    #aboutme {
+        flex-direction: column;
+    }
+    #myphoto {
+        margin-top: 10vw;
+    }
+    #myinfo {
+        max-width: 90vw;
+    }
+    #navbar {
+        height: 125%;
+    }
 }

@@ -1,75 +1,91 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <link rel="stylesheet" href="styles.css" />
-    <meta charset="utf-8" />
-    <!-- texts -->
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Sanchez"
-    />
-    <!-- subtitles -->
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Raleway"
-    />
-    <!-- titles -->
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Mukta+Vaani"
-    />
-    <script src="app.js"></script>
-    <title>Mi portfolio</title>
-  </head>
-  <body>
-    <nav id="navbar">
-      <a id="aboutmelink" onclick="change('aboutme')">Quien soy</a>
-      <a id="cvitaelink" onclick="change('cvitae')">Mis conocimientos</a>
-      <a id="projectslink" onclick="change('projects')">Mis proyectos</a>
-      <a id="contactlink" onclick="change('contact')">Contacto</a>
-    </nav>
-    <section id="aboutme">
-      <div id="myinfo">
-        <p id="name">Alejandro García Amador</p>
-        <span
-          >Hola! Soy Ingeniero informático con mención en tecnologías de
-          la información, con experiencia en proyectos grupales desarrollo de
-          aplicaciones para Android e IOS, desarrollo de APIs e intranets en
-          Laravel, adquiridos durante nueves meses en prácticas de empresa.
-          Responsable, trabajador, con ganas de seguir formándome y dispuesto a
-          incorporarme, de manera inmediata, a un puesto de trabajo dentro del
-          sector.</span
-        >
-      </div>
-      <img src="img/me.jpg" alt="handosme young man" id="myphoto" />
-    </section>
-    <section id="cvitae">
-      <div class="row">
-        <div class="title">
-          <img src="icons/school_black_24dp.svg" alt="" class="icon">
-          <p >Formación</p>
-        </div>
-        <div class="box shadow-right">
-          <ul>
-            <li>Grado en Ingeniería Informática <br><span class="subtitle">Mención en Teconologías de la Información</span></span></li>
-            <li>Bachillerato Tecnológico <br><span class="subtitle">Colegio Nuestra Señora del Pilar Jerez de la Frontera</span></li>
-          </ul>
-        </div>
-      </div>
-      <div class="row">
 
-        <div class="box shadow-right">
-          <ul>
-            <li>Grado en Ingeniería Informática <br><span class="subtitle">Mención en Teconologías de la Información</span></span></li>
-            <li>Bachillerato Tecnológico <br><span class="subtitle">Colegio Nuestra Señora del Pilar Jerez de la Frontera</span></li>
-          </ul>
-        </div>
-        <div class="title">
-          <img src="icons/school_black_24dp.svg" alt="" class="icon">
-          <p >Formación</p>
-        </div>
-    </section>
-    <section id="projects"></section>
-    <section id="contact"></section>
-  </body>
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <link rel="stylesheet" href="styles.css" />
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <!-- texts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sanchez" />
+  <!-- subtitles -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway" />
+  <!-- titles -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mukta+Vaani" />
+  <script src="app.js"></script>
+  <title>Mi portfolio</title>
+</head>
+
+<body>
+  <nav id="navbar">
+    <div id="aboutmelink" class="activelink " onclick="change('aboutme')">Quien soy</div>
+    <div id="cvitaelink" onclick="change('cvitae')">Mi Formación</div>
+    <div id="projectslink" onclick="change('projects')">Mis proyectos</div>
+    <div id="contactlink" onclick="change('contact')">Contacto</div>
+  </nav>
+  <section id="aboutme">
+    <div id="myinfo">
+      <p id="name">Alejandro García Amador</p>
+      <span>Hola! Soy Ingeniero informático con mención en tecnologías de
+        la información, con experiencia en proyectos grupales desarrollo de
+        aplicaciones para Android e IOS, desarrollo de APIs e intranets en
+        Laravel, adquiridos durante nueves meses en prácticas de empresa.
+        Responsable, trabajador, con ganas de seguir formándome y dispuesto a
+        incorporarme, de manera inmediata, a un puesto de trabajo dentro del
+        sector.</span>
+    </div>
+    <img src="img/me.jpg" alt="handosme young man" id="myphoto" />
+  </section>
+  <section id="cvitae">
+    <div class="row">
+      <div class="title">
+        <img src="icons/school_black_24dp.svg" alt="" class="icon">
+        <p>Estudios</p>
+      </div>
+      <div class="box shadow-right">
+        <ul>
+          <li>Grado en Ingeniería Informática <br><span class="date">09/2017 - 07/2022 </span><span
+              class="subtitle">Mención en Teconologías de la Información</span></span></li>
+          <li>Bachillerato Tecnológico <br><span class="date">09/2015 - 06/2017 </span><span class="subtitle">Colegio
+              Nuestra Señora del Pilar Jerez de la Frontera</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row">
+      <div class="box shadow-left">
+        <ul>
+          <li>Xerintel Internet Technologies SL <br>
+            <span class="date">06/2021 - 02/2022 </span>
+            <ul class="subtitle">
+              <li>Desarrollo full-stack de aplicaciones para Android e IOS con ionic</li>
+              <li>APIs e intranets en Laravel</li>
+              <li>Contacto directo con clientes</li>
+            </ul>
+        </ul>
+      </div>
+      <div class="title">
+        <img src="icons/business.svg" alt="" class="icon">
+        <p>Experiencia laboral</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="title">
+        <img src="icons/workspace_premium_black_24dp.svg" alt="" class="icon">
+        <p>Certificados</p>
+      </div>
+      <div class="box shadow-right">
+        <ul class="certifies">
+          <li>First Certificate in English</li>
+          <li>Cisco CCNP ROUTE: Implementing IP Routing </li>
+          <li>Cisco CCNA R&S: Introduction to Networks </li>
+          <li>freeCodeCamp: JavaScript Algorithms and Data Structures </li>
+          <li>freeCodeCamp: Responsive Web Design </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <section id="projects"></section>
+  <section id="contact"></section>
+</body>
+
 </html>
