@@ -1,7 +1,7 @@
 html {
     display: block;
     width: max-content;
-    font-family: "Sanchez", "Roboto";
+    font-family: "Fira Code", "Roboto";
     padding: 0;
     margin: 0 auto;
     font-size: 22px;
@@ -19,7 +19,7 @@ body {
     align-items: start;
 }
 #navbar {
-    height: 100%;
+    height: 85%;
     position: static;
     background-color: #72757e;
     color: #fffffe;
@@ -28,7 +28,7 @@ body {
     flex-direction: row;
     flex-wrap: nowrap;
     align-items: center;
-    font-family: "Mukta Vaani", "Sanchez";
+    font-family: "Roboto", "Fira Code";
     border-radius: 0px 0px 10px 10px;
     text-align: center;
     text-decoration: none;
@@ -81,7 +81,7 @@ section {
     max-width: 30vw;
 }
 #name {
-    font-family: "Mukta Vaani", "Sanchez";
+    font-family: "Roboto", "Fira Code";
     color: #fffffe;
     font-size: 1.6rem;
     margin: -4px 0 10px 0;
@@ -90,7 +90,7 @@ section {
     aspect-ratio: initial;
     height: 45vh;
     max-height: 500px;
-    border-radius: 16px;
+    border-radius: 10px;
 }
 #cvitae {
     display: flex;
@@ -103,17 +103,16 @@ section {
     flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
-    margin: 2vh 0;
+    margin-bottom: 2vh;
 }
 .icon {
     height: 5rem;
     margin: 2vh 8vw;
-    filter: invert(32%) sepia(81%) saturate(1869%) hue-rotate(238deg) brightness(98%) contrast(91%);
 }
 
 .title {
     color: #fffffe;
-    font-family: "Mukta Vaani", "Sanchez";
+    font-family: "Fira Code", "Roboto";
     font-weight: 500;
     text-align: center;
     font-size: 1.6rem;
@@ -132,6 +131,11 @@ section {
     border-radius: 10px;
     padding: 20px;
     background: #242629;
+}
+
+.box:hover{
+    transform: scale(1.25);
+    transition: transform .5s ease-out;
 }
 .shadow-right {
     box-shadow: 5px 5px 19px #1f2023, -5px -5px 19px #292c2f;
@@ -165,6 +169,57 @@ ul.subtitle {
     vertical-align: middle;
     height: 1.5rem;
 }
+.skillsbox{
+    display: flex;
+    flex-wrap: wrap;
+
+}
+.skillsbox span{
+    margin: 10px 5px;
+    width: 30%;
+    color: #fffffe;
+}
+.linksgroup{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 50%;
+    margin-left: 34%;
+}
+
+.link{
+    margin: 10vh 0;
+    width: 50%;
+}
+.link a{
+    text-decoration: none;
+    color: #7f5af0;
+}
+.link:hover{
+    color: white;
+    font-size: 1.3rem;
+    transition: color .5s ease-in-out;
+    transition: font-size .5s ease-in-out;
+}
+.link:hover img{
+    transform: scale(1.5);
+    transition: transform .5s ease-in-out;
+}
+.linkicon{
+    width: 2rem;
+    height: 2rem;
+    border-radius: 5px;
+    vertical-align: middle;
+    margin-right: 20px;
+}
+.purple{
+    filter: invert(32%) sepia(81%) saturate(1869%) hue-rotate(238deg) brightness(98%) contrast(91%);
+}
+#gif{
+    margin: auto;
+    width: 250px;
+}
 
 @media (max-width: 800px) {
     html {
@@ -181,5 +236,23 @@ ul.subtitle {
     }
     #navbar {
         height: 125%;
+    }
+    .box:hover{
+        transition: none;
+        transform: none;
+    }
+    .linksgroup{
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        width: 100%;
+        margin: 0 auto;
+    }
+    .link{
+        margin: 5vh 0;
+        width: 100%;
+    }
+    .skillsbox span{
+        width: 40%;
     }
 }
