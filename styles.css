@@ -44,6 +44,7 @@ body {
 #navbar div:hover {
     transition: all 0.5s ease;
     color: #000000;
+    cursor: pointer;
 }
 #aboutmelink {
     border-radius: 0 0 0 10px;
@@ -180,29 +181,26 @@ ul.subtitle {
     color: #fffffe;
 }
 .linksgroup{
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    flex-direction: row;
-    width: 50%;
-    margin-left: 34%;
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: 1fr 1fr; 
+    gap: 15vh 20%;
 }
 
-.link{
-    margin: 10vh 0;
-    width: 50%;
+.linkbox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-.link a{
+.link{
     text-decoration: none;
     color: #7f5af0;
 }
-.link:hover{
+.linkbox:hover{
     color: white;
-    font-size: 1.3rem;
     transition: color .5s ease-in-out;
-    transition: font-size .5s ease-in-out;
 }
-.link:hover img{
+.linkbox:hover img{
     transform: scale(1.5);
     transition: transform .5s ease-in-out;
 }
@@ -211,15 +209,48 @@ ul.subtitle {
     height: 2rem;
     border-radius: 5px;
     vertical-align: middle;
-    margin-right: 20px;
+    margin: 30px 0;
 }
 .purple{
     filter: invert(32%) sepia(81%) saturate(1869%) hue-rotate(238deg) brightness(98%) contrast(91%);
 }
 #gif{
-    margin: auto;
+    margin: 5vh auto;
     width: 250px;
 }
+#projects a{
+    text-decoration: none;
+    color: #7f5af0;
+    font-weight: 700;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+
+.projecttitle{
+    position:absolute;
+    left: -100%;
+    top: -100%;
+    visibility: hidden;
+}
+#projects a:hover .projecttitle{
+    visibility: visible;
+    position: inherit;
+}
+
+.projectbox{
+    display: flex;
+    margin: 0 auto;
+    width: 80vw;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+.projectbox img{
+    width: 25vw;
+    height: 15vw;
+}
+
 
 @media (max-width: 800px) {
     html {
@@ -247,12 +278,22 @@ ul.subtitle {
         align-items: center;
         width: 100%;
         margin: 0 auto;
+        gap: 0 0;
+        display: flex;
     }
     .link{
-        margin: 5vh 0;
+        margin: 0;
         width: 100%;
     }
     .skillsbox span{
         width: 40%;
+    }
+    .projectbox img{
+        width: 25vh;
+        height: 15vh;
+    }
+    .projecttitle{
+        visibility: visible;
+        position: inherit;
     }
 }
